@@ -22,6 +22,7 @@ Verify Products
         VerifyText           ${item}
     END
 
+    ${FirstNameExcel}=       Read Excel Cell       row_num=2       col_num=1   
 Update Product Id
     [Documentation]     Update product id to an excel sheet and save changes
     [Tags]              excel    products    update
@@ -34,11 +35,13 @@ Update Product Id
     # Create new unique product id
     ${new_id}=          Generate Random String    length=6    chars=[NUMBERS]
 
-    # Get the current product id
-    ${current_id}=      Read Excel Cell    row_num=2    col_num=2    sheet_name=Fur
+
+
+    ${ContactFirstNameToSave}=                    Generate Random String    length=4    chars=[LOWER]
+
 
     # Write new product id to the excel
-    Write Excel Cell    row_num=2    col_num=2    value=${new_id}    sheet_name=Fur
+    Write Excel Cell    row_num=2    col_num=1    value=${ContactFirstNameToSave}    sheet_name=ContactRecord
 
     # Check that new value was updated to excel
     ${updated_id}=      Read Excel Cell    row_num=2    col_num=2    sheet_name=Fur
