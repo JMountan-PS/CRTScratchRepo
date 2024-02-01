@@ -5,6 +5,7 @@ Library                         String
 Library                         Collections
 Library                         QVision
 Library                         OperatingSystem
+Library                         ../libraries/GitOperations.py
 
 
 *** Keywords ***
