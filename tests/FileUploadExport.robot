@@ -23,20 +23,39 @@ Upload a File to Salesforce Using QVision
     ClickText    Upload Files
     
     #Now we need to swap to QVision in order to click through the Linux filesystem
-    QVision.ClickText    suite    anchor=services
+    QVision.DoubleClick    suite    anchor=ui-recorder
     QVision.DoubleClick           data
     QVision.DoubleClick           UploadStaging
-    QVision.DoubleClick           Lorem_ipsum.pdf
+    QVision.DoubleClick           CRT Training Day 1.pdf
     
     #Now that the file is uploaded, we can go back to QWeb
     ClickText                     Done
     VerifyText                    file was added to the Account
     
 Verify information in a PDF
-    ClickText                Lorem_ipsum    anchor=Title
-    
+    ClickText                CRT Training Day 1    anchor=Title
+    Sleep                    10s
+
     #Again we need to use QVision in most PDF validation use cases
-    QVision.VerifyText       Lorem Ipsum is simply dummy text of the printing
-    ...                      and typesetting industry.
-    QVision.VerifyText       Test PDF
+    QVision.VerifyText       Theory & Practice
+    QVision.VerifyText       Section 1
+    QVision.HotKey           pagedown
+    QVision.VerifyText       Introduction to Testing
+    QVision.VerifyText       Test Automation
+    QVision.VerifyText       Principles            anchor=Test Automation
+
+
+    #When we're done, use Hotkey to escape the window
+    QVision.HotKey           esc
+
+Download the same PDF
     
+    UseTable    Title
+    ClickCell    r?CRT Training Day 1/c6
+    ExpectFileDownload
+    ClickText    Download
+    VerifyFileDownload
+    
+    #Try using QVision to quickly click the downloaded file name
+    QVision.ClickText    CRT Training Day 1.pdf
+
