@@ -4,7 +4,7 @@ Library                         QForce
 Library                         String
 Library                         Collections
 Library                         QVision
-Library                        OperatingSystem
+Library                         OperatingSystem
 
 
 *** Keywords ***
@@ -26,7 +26,7 @@ Login
     TypeText                    Username                    ${username}                 delay=1
     TypeText                    Password                    ${password}
     ClickText                   Log In
-    
+
 
 
 Login As
