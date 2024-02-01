@@ -37,7 +37,7 @@ Verify information in a PDF
     Sleep                    10s
 
     #Again we need to use QVision in most PDF validation use cases
-    QVision.VerifyText       Theory & Practice
+    QVision.VerifyText       Theory & Practice     timeout=40s
     QVision.VerifyText       Section 1
     QVision.HotKey           pagedown
     QVision.VerifyText       Introduction to Testing
