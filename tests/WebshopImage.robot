@@ -2,6 +2,7 @@
 Library           QWeb
 Library           QImage
 Library           QVision
+Variables         ../data/Products_To_Verify.py
 Suite Setup       OpenBrowser                 about:blank    chrome
 
 
