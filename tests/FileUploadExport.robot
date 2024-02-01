@@ -59,3 +59,17 @@ Download the same PDF
     #Try using QVision to quickly click the downloaded file name
     QVision.ClickText    CRT Training Day 1.pdf
 
+    #Need to switch tabs now that we have opened the pdf
+    SwitchWindow         NEW
+
+        #Again we need to use QVision in most PDF validation use cases
+    QVision.VerifyText       Theory & Practice     timeout=40s
+    QVision.VerifyText       Section 1
+    QVision.ClickText        Section 1             #Sometimes we need to click into elements when using QVision
+
+    #Switch back once done
+    CloseWindow
+    SwitchWindow             1
+    
+Export download to Git
+    Log Variables    level=WARN
