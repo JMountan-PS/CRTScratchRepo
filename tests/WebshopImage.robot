@@ -15,4 +15,5 @@ Test Sacha the Deer image
     ${ActualImgPath}=    CaptureIcon    //*[@id\="products"]/section/div/ul/li[1]/div[1]/div[1]/a/img
     CompareImages        ${ActualImgPath}    SachaTheDeer.png    tolerance=0.9     #Changed this to a .png format
     
-    
+    Log Variables        level=WARN
+    Log To Console       ${TestEnv.ip}
