@@ -12,6 +12,9 @@ Create Account Record data
     LaunchApp    Accounts
     
     ClickText    New
+    ${AcctName}=    Generate Random String    length=10    chars=[LETTERS]
+    TypeText        *Account Name             ${AcctName}
+    
     
 
 Upload a File to Salesforce
