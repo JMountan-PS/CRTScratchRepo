@@ -84,3 +84,4 @@ Export download to Git
     File Should Exist      ${CURDIR}/../data/DownloadStaging/CRT Training Day 1.pdf                      #Confirm the file is copied
     
     #Leverage the GitOperations library to commit the file to github
+    Commit And Push        ${CURDIR}/../data/DownloadStaging/CRT Training Day 1.pdf       main               
