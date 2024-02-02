@@ -42,6 +42,7 @@ Verify information in a PDF
     #Again we need to use QVision in most PDF validation use cases
     QVision.VerifyText     Theory & Practice           timeout=40s
     QVision.VerifyText     Section 1
+    QVision.LogScreenshot
     QVision.HotKey         pagedown
     QVision.VerifyText     Introduction to Testing
     QVision.VerifyText     Test Automation
@@ -69,6 +70,7 @@ Download the same PDF
     QVision.VerifyText     Theory & Practice           timeout=40s
     QVision.VerifyText     Section 1
     QVision.ClickText      Section 1                   #Sometimes we need to click into elements when using QVision
+    QVision.HotKey         pagedown
 
     #Switch back once done
     CloseWindow
