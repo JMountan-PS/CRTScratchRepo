@@ -1,5 +1,8 @@
 *** Settings ***
 Resource                   ../resources/SalesforceCommon.robot
+Library                    QVision
+Library                    OperatingSystem
+Library                    ../libraries/GitOperations.py
 Suite Setup                Setup Browser
 Suite Teardown             Close All Browser Sessions
 
@@ -81,7 +84,7 @@ Export download to Git
     List Directory         ${CURDIR}/../../            #Figuring out the same filepath from the current directory
 
     Copy File              ${CURDIR}/../../Downloads/CRT Training Day 1.pdf        ${CURDIR}/../data/DownloadStaging
-    File Should Exist      ${CURDIR}/../data/DownloadStaging/CRT Training Day 1.pdf                      #Confirm the file is copied
-    
+    File Should Exist      ${CURDIR}/../data/DownloadStaging/CRT Training Day 1.pdf                   #Confirm the file is copied
+
     #Leverage the GitOperations library to commit the file to github
-    Commit And Push        ${CURDIR}/../data/DownloadStaging/CRT Training Day 1.pdf       main               
+    Commit And Push        ${CURDIR}/../data/DownloadStaging/CRT Training Day 1.pdf                   main
