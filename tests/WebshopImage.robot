@@ -12,9 +12,9 @@ Test Sacha the Deer image
     GoTo          https://qentinelqi.github.io/shop/
     VerifyText    Find your spirit animal
 
-    #QWeb.SetConfig     SearchMode                    none    #Remove highlighted border on captureIcon
+    QWeb.SetConfig     SearchMode                    none    #Remove highlighted border on captureIcon
     ${ActualImgPath}=    CaptureIcon    //*[@id\="products"]/section/div/ul/li[1]/div[1]/div[1]/a/img
     CompareImages        ${ActualImgPath}    SachaTheDeer.png    tolerance=0.99     #Changed this to a .png format
-    #QWeb.SetConfig     SearchMode                    draw        #Remove highlighted border on captureIcon
+    QWeb.SetConfig     SearchMode                    draw        #Remove highlighted border on captureIcon
 
     
