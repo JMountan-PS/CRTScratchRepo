@@ -4,6 +4,7 @@
 
 Documentation           Test suite for CRT starter.
 Library                 QWeb
+Library                 ExcelLibrary
 Suite Setup             Open Browser    about:blank    chrome
 Suite Teardown          Close All Browsers
 
@@ -13,6 +14,10 @@ Shop for products
     [Documentation]     Select a product, verify details on the page,
     ...                 add the product to the cart and continue shopping.
     GoTo                https://qentinelqi.github.io/shop/
+
+    
+
+
     ClickText           ${product_name}
     VerifyText          Slim Fit, 5oz 100% Cotton T-Shirt.
     VerifyText          ${description}
