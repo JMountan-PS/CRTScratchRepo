@@ -15,7 +15,10 @@ Shop for products
     ...                 add the product to the cart and continue shopping.
     GoTo                https://qentinelqi.github.io/shop/
 
-    
+    Open Excel Document    ../data/productsWebshop.xlsx    products
+    ${product_name}=       Read Excel Cell                 3    1
+    ${description}=        Read Excel Cell                 3    2
+    ${price}=              Read Excel Cell                 3    3
 
 
     ClickText           ${product_name}
