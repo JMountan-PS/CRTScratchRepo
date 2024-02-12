@@ -7,6 +7,13 @@ Library    String
 ${OAuth_Token}
 ${Active_Session}
 
+*** Test Cases ***
+Test this out
+    Authenticate Salesforce REST API    3MVG9Rr0EZ2YOVMYqYQJc2MIJgxXxFL_UsqLZEJ0myKQ_j5pqZo9cpWSMTnIcxCcG519gVdCU_itscZ4WgE26    
+    ...                                 8A089A928CBE364F54CE119E074E674AEA51ED36C0F5E5EF3C097FA1DB79EAA3  
+    ...                                 c1-jmountan@copado.com       
+    ...                                 Test123456
+
 *** Keywords ***
 Authenticate Salesforce REST API
     [Arguments]    ${client_id}    ${client_secret}    ${username}    ${password}    ${url}=https://login.salesforce.com/
