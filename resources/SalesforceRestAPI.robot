@@ -25,4 +25,4 @@ Authenticate Salesforce REST API
     ...                                                     username=${username}
     ...                                                     password=${password}
 
-    ${resp} =                   Post On Session             SF_REST               /oauth2/token          json=&{body}
+    ${resp} =                   Post On Session             SF_REST               /oauth2/token          data=&{body}
